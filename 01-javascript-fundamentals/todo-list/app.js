@@ -21,6 +21,26 @@ meinBtn.addEventListener('click', () => {
         // Hier ist unser Stoppschiild
         return;
     }
+
+    // Der Dopplungsschutz
+    // Ein Variabl, die sich merkt, ob wir ein Duplikat gefunden haben
+    let istDoppelt = false;
+
+    // Mit der for ... of loop gehen wir jeden einzeelnen Listenpunkt in unserer Liste durch
+    for (const vorhandenesLi of meineListe.children) {
+        // Wenn der Text eexakt übereeinstimmt
+        if (vorhandenesLi.textContent.startsWith(text)) {
+            istDoppelt = true; // Teffer! Duplikat geefunden.
+        };
+    };
+
+    // Das Sttoppschild
+    // Wenn istDoppelt wahr (true) ist, brechen wir sofort ab!
+    if (istDoppelt === true) {
+        alert("Diese Aufgabe existiert bereits!");
+        return;
+    };
+
     // Hier erstellen wir eine neue li
     const neuesLi = document.createElement('li');
 
