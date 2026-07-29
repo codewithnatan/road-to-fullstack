@@ -4,6 +4,19 @@ const preis = document.getElementById('inputPreis');
 const button = document.getElementById('btn');
 const liste = document.getElementById('einkaufsListe');
 
+// Eine für den Budget Rechner
+function aktualisiereBudget() {
+    let total = 0;
+
+    for (const li of liste.children) {
+        total += Number(li.dataset.preis);
+    };
+
+    if (total > 50) {
+        alert("Achtung! Dein Budget von 50€ wurde überschritten! Aktuell: " + total + "€");
+    };
+};
+
 // Reaktion auf Button Klick
 button.addEventListener('click', () => {
 
@@ -18,7 +31,7 @@ button.addEventListener('click', () => {
     };
 
     let istDoppelt = false;
-
+    // 
     for (const vorhandenesLi of liste.children) {
         if (vorhandenesLi.textContent.startsWith(text)) {
             istDoppelt = true;
@@ -37,9 +50,10 @@ button.addEventListener('click', () => {
 
     loeschBtn.innerText = 'X';
     inEinkaufswagen.innerHTML = 'Im Wagen';
-
+    // Ein EventListener für den X und Im Wagen Button
     loeschBtn.addEventListener('click', () => {
         neueLi.remove();
+        aktualisiereBudget();
     });
 
     inEinkaufswagen.addEventListener('click', () => {
@@ -55,16 +69,7 @@ button.addEventListener('click', () => {
     neueLi.appendChild(loeschBtn);
     neueLi.appendChild(inEinkaufswagen);
 
-    let total = 0;
-
-    for (const li of liste.children) {
-
-        total += Number(li.dataset.preis);
-
-        if (total > 50) {
-            alert("Du bist über dein Budget!");
-        };
-    };
+    aktualisiereBudget();
 
     produkt.value = '';
 
