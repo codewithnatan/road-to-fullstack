@@ -45,7 +45,7 @@ const addTransaction = () => {
  <div class="min-h-screen grid grid-cols-1 md:grid-cols-[260px_1fr] bg-slate-50 font-sans text-slate-800">
 
   <!-- Links: Die Sidebar (Dunkelblau/Slate-900) -->
-   <aside class="bg-slate-900 text-white p-6 flex flex-col justify-between hidden md:flex">
+   <aside class="bg-slate-900 text-white p-6 hidden md:flex flex-col justify-between">
     <div>
       <!-- Logo / App Name -->
        <div class="flex items-center space-x-3 mb-8">
