@@ -86,6 +86,28 @@ const addTransaction = () => {
         </div>
        </header>
 
+       <!-- Die drei Info-Karten (Struktur) -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+          <!-- Karte 1: Gesamtsaldo -->
+           <div class="bg-white p-6 border border-slate-200/80 rounded-2xl shadow-sm">
+            <p class="text-xs font-bold uppercase text-slate-400 tracking-wider">Gesamt Guthaben</p>
+            <p class="text-2xl font-bold text-slate-900 mt-2">2.417,70€</p>
+           </div>
+
+           <!-- Karte 2: Einnahmen -->
+            <div class="bg-white p-6 border border-slate-200/80 rounded-2xl shadow-sm">
+              <p class="text-xs font-bold uppercase text-slate-400 tracking-wider">Einnahmen</p>
+              <p class="text-2xl font-bold text-emerald-600 mt-2">+2.500,00€</p>
+            </div>
+
+            <!-- Karte 3: Ausgaben -->
+             <div class="bg-white p-6 border border-slate-200/80 rounded-2xl shadow-sm">
+              <p class="text-xs font-bold uppercase text-slate-400 tracking-wider">Ausgaben</p>
+              <p class="text-2xl font-bold text-rose-600 mt-2">82,30€</p>
+             </div>
+        </div>
+
        <!-- Grid für Inputs und Liste nebeneinander auf großen Bildschirmen -->
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
 
