@@ -90,19 +90,19 @@ const addTransaction = () => {
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
           <!-- Karte 1: Gesamtsaldo -->
-           <div class="bg-white p-6 border border-slate-200/80 rounded-2xl shadow-sm">
+           <div class="bg-white p-6 border-t-4 border-t-indigo-500 border-x border-b border-slate-200/80 rounded-2xl shadow-sm">
             <p class="text-xs font-bold uppercase text-slate-400 tracking-wider">Gesamt Guthaben</p>
             <p class="text-2xl font-bold text-slate-900 mt-2">2.417,70€</p>
            </div>
 
            <!-- Karte 2: Einnahmen -->
-            <div class="bg-white p-6 border border-slate-200/80 rounded-2xl shadow-sm">
+            <div class="bg-white p-6 border-t-4 border-t-emerald-500 border-x border-b border-slate-200/80 rounded-2xl shadow-sm">
               <p class="text-xs font-bold uppercase text-slate-400 tracking-wider">Einnahmen</p>
               <p class="text-2xl font-bold text-emerald-600 mt-2">+2.500,00€</p>
             </div>
 
             <!-- Karte 3: Ausgaben -->
-             <div class="bg-white p-6 border border-slate-200/80 rounded-2xl shadow-sm">
+             <div class="bg-white p-6 border-t-4 border-t-rose-500 border-x border-b border-slate-200/80 rounded-2xl shadow-sm">
               <p class="text-xs font-bold uppercase text-slate-400 tracking-wider">Ausgaben</p>
               <p class="text-2xl font-bold text-rose-600 mt-2">82,30€</p>
              </div>
